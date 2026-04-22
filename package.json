@@ -1,0 +1,27 @@
+{
+  "name": "ordem-paranormal-fichas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron-main.cjs",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "electron-dev": "electron .",
+    "start": "npx concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"red.bold,blue.bold\" \"npm run dev\" \"npm run electron-dev\""
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^41.2.2",
+    "tsx": "^4.21.0"
+  }
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blood: #b22222;
+  --color-void: #0a0a0a;
+  --color-abyss: #050505;
+}
+
+@layer components {
+  /* SEU DESIGN DE HEXÁGONO ORIGINAL */
+  .attribute-hexagon {
+    width: 70px;
+    height: 80px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #050505 100%);
+    border: 1px solid #333;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    @apply flex flex-col items-center justify-center;
+  }
+}
+
+/* Brilho do Crítico */
+.is-crit {
+  color: #facc15 !important;
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #b22222; border-radius: 10px; }
